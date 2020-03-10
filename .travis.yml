@@ -1,0 +1,17 @@
+language: java
+jdk: openjdk11
+jobs:
+  include:
+    # simple packaging
+    - stage: package
+      script: mvn -B clean package -DskipTests
+    # run test
+    - stage: test
+      script: mvn -B test
+    # run analyzers
+    - stage: analyse
+      script: mvn -B verify -DskipTests
+    # deploy only if master
+    - stage: deploy
+      if: branch = master
+      script: mvn -B install -DskipTests # no deploy repo defined
