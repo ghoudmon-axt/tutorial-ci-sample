@@ -14,7 +14,7 @@ class DigestTest {
   void digestShallReturnAValue() {
     String value = UUID.randomUUID().toString();
     Assertions.assertNotNull(new Digest().digest(value));
-    Assertions.assertEquals(value, new Digest().digest(value));
-    // Assertions.assertNotEquals(value, new Digest().digest(value));
+    // Assertions.assertEquals(value, new Digest().digest(value));
+    Assertions.assertNotEquals(value, new Digest().digest(value));
   }
 }
