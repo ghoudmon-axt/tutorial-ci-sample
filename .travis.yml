@@ -1,4 +1,5 @@
 language: java
+install: true
 jdk: openjdk11
 jobs:
   include:
@@ -15,3 +16,6 @@ jobs:
     - stage: deploy
       if: branch = master
       script: mvn -B install -DskipTests # no deploy repo defined
+cache:
+  directories:
+    - $HOME/.m2
