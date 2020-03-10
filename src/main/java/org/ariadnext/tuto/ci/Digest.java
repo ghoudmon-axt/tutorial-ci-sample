@@ -18,7 +18,7 @@ public class Digest {
    */
   public String digest(final String value) {
     try {
-      MessageDigest digest = MessageDigest.getInstance("SHA-1");
+      MessageDigest digest = MessageDigest.getInstance("SHA-256");
       byte[] hash = digest.digest(value.getBytes(StandardCharsets.UTF_8));
       return Base64.getEncoder().encodeToString(hash);
     } catch (Exception e) {
