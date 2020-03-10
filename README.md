@@ -1,5 +1,8 @@
 # Basic CI sample
 
+[![Build Status](https://travis-ci.org/ghoudmon-axt/tutorial-ci-sample.svg?branch=master)](https://travis-ci.org/ghoudmon-axt/tutorial-ci-sample)
+
+
 This sample project is a part of a ci tutorial.
 
 It's a maven project with checkstyle, findbugs and findbugsecs analyzer.
